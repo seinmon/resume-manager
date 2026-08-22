@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in LaTeX
+% Original Author : Sourabh Bajaj
+% Modified by     : Hossein Monjezi
+% License         : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Section formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeSummary}{\section{Summary}}
+
+\newcommand{\resumeSectionStart}[1]{\section{#1}\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSectionEnd}{\end{itemize}}
+
+\newcommand{\resumeHeading}[4]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        {#1 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeItemWithTitle}[2]{
+    \item\small{
+        \textbf{#1}{: #2 \vspace{-4pt}}
+    }
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Carl ``CJ'' Johnson}
+    & Email: \href{mailto:cj@grovestreet.example}{cj@grovestreet.example}\\
+    Grove Street, Los Santos, San Andreas
+    & Mobile: \href{tel:+1555018792}{+1 555 018 792} \\
+\end{tabular*}
+
+\resumeSummary
+    Resourceful operator and community leader with experience coordinating
+    high-pressure logistics, rebuilding operations, managing partnerships, and
+    turning distressed assets into profitable ventures. Known for adaptability,
+    negotiation skills, vehicle handling, and delivering results across
+    Los Santos, San Fierro, Las Venturas, and beyond. Resourceful operator and
+    leader experienced in high-pressure logistics, operational recovery,
+    cross-city alliances, and business turnarounds.
+
+\resumeSectionStart{Experience}
+
+    \resumeHeading{Grove Street Families}{Los Santos, San Andreas}
+        {Community Operations Lead}{1992 -- Present}
+        \resumeItemListStart
+
+            \resumeItem{
+                Rebuilt Grove Street Families influence by coordinating field
+                operations, restoring trust with partners, and strengthening
+                presence.
+            }
+
+            \resumeItem{
+                Led time-sensitive recovery and protection efforts while
+                balancing business priorities, community safety, and competition
+                pressure.
+            }
+
+            \resumeItem{
+                Built working relationships with partners across Los Santos,
+                San Fierro, and Las Venturas to expand operational reach and
+                improve resilience.
+            }
+
+        \resumeItemListEnd
+
+        \resumeSubheading{Independent Problem Solver}{1987 -- 1992}
+            \resumeItemListStart
+
+                \resumeItem{
+                    Managed relocation, reinvention, and transition while
+                    developing negotiation, driving, aircraft handling,
+                    planning, and informal finance skills.
+                }
+
+                \resumeItem{
+                    Solved ambiguous, fast-moving problems with limited
+                    resources and incomplete information.
+                }
+
+            \resumeItemListEnd
+
+    \resumeHeading{Doherty Garage}{San Fierro, San Andreas}
+        {Co-owner and Operations Manager}{1992}
+        \resumeItemListStart
+
+            \resumeItem{
+                Helped convert a neglected garage into a functioning automotive
+                business with repair, customization, and tuning services.
+            }
+
+            \resumeItem{
+                Coordinated mechanics, suppliers, and partners to support
+                vehicle acquisition, restoration, specialized modifications,
+                and broader San Fierro ventures.
+            }
+
+        \resumeItemListEnd
+
+    \resumeHeading{Four Dragons Casino Partnership}{Las Venturas, San Andreas}
+        {Strategic Associate}{1992}
+        \resumeItemListStart
+
+            \resumeItem{
+                Supported casino leadership with handling pressure from
+                competition, by collecting data and coordinating field
+                operations.
+            }
+
+            \resumeItem{
+                Planned and executed complex, multi-stage logistics involving
+                access control, transportation, and team coordination.
+            }
+
+        \resumeItemListEnd
+\resumeSectionEnd
+
+\resumeSectionStart{Projects}
+    \resumeItemWithTitle{Grove Street Recovery}{
+        Restored a Los Santos foothold through building partnerships, targeted
+        campaigns, and leadership.
+    }
+
+    \resumeItemWithTitle{Las Venturas Casino Operation}{
+        Coordinated a casino logistics project requiring surveillance,
+        specialized equipment, trusted personnel, and precise execution.
+    }
+\resumeSectionEnd
+
+\resumeSectionStart{Education}
+    \resumeHeading{Los Santos School of Hard Knocks}{Los Santos, San Andreas}
+        {Applied Business Strategy and Community Leadership}{1987 -- 1992}
+
+\resumeSectionEnd
+
+\resumeSectionStart{Skills}
+
+    \resumeItemWithTitle{Operations}{
+        Field coordination, risk assessment, route planning, asset recovery
+    }
+
+    \resumeItemWithTitle{Transportation}{
+        Defensive driving, racing, motorcycles, heavy vehicles, aircraft,
+        helicopters
+    }
+
+    \resumeItemWithTitle{Business}{
+        Garage operations, casino partnerships, informal finance, property
+        management, negotiation
+    }
+
+\resumeSectionEnd
+
+\end{document}
