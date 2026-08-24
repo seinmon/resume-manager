@@ -2,7 +2,8 @@
 
 A helper tool for maintaining reusable LaTeX resume variants and creating
 job-specific tailored resumes. The LaTeX template is based on Sourabh Bajaj's
-[resume template](https://github.com/sb2nov/resume).
+[resume template](https://github.com/sb2nov/resume). Here is a sample resume I
+wrote for Carl Johnson from GTA San Andreas:
 
 ![Resume template preview](template_preview.jpg)
 
@@ -33,6 +34,8 @@ Generated PDFs are written to `build/`, and exported tailored PDFs are copied to
 ### Quick Start
 
 ```sh
+git clone https://github.com/seinmon/resume-manager.git
+cd resume-manager
 make
 make new-variant VARIANT=ios FROM=base
 make new TAILORED=apple-ios VARIANT=ios
@@ -117,6 +120,6 @@ Remove `build` and `out` directories:
 make cleanall
 ```
 
-### License
+## License
 
 Licensed under MIT.
