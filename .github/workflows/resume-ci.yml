@@ -1,0 +1,58 @@
+name: Resume CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    name: Smoke test Makefile workflow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            latexmk \
+            texlive-latex-extra
+
+      - name: Build default resume variant
+        run: make
+
+      - name: Create reusable variant
+        run: make new-variant VARIANT=var FROM=base
+
+      - name: Create tailored resume
+        run: make new TAILORED=tailored-var VARIANT=var
+
+      - name: Build tailored resume
+        run: make TAILORED=tailored-var
+
+      - name: Export tailored resume
+        run: make export TAILORED=tailored-var
+
+      - name: List generated resumes
+        run: |
+          make list | tee resume-list.txt
+          grep -Fxq "base" resume-list.txt
+          grep -Fxq "var" resume-list.txt
+          grep -Fxq "tailored-var" resume-list.txt
+
+      - name: Clean selected tailored build
+        run: |
+          make clean TAILORED=tailored-var
+          test ! -f build/tailored-var.pdf
+          test -f out/tailored-var.pdf
+
+      - name: Clean all generated output
+        run: |
+          make cleanall
+          test ! -d build
+          test ! -d out
